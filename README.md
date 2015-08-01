@@ -37,6 +37,9 @@ With my SIM900 library and the good SIM900 module, I can send a SMS very quickly
 
 ## Modifications
 You need to specify your APN at SIM900.cpp:35 (because like i say, it just a library for a personnal project, so I don't need to change my APN...)
+```Arduino
+sendAT("AT+CSTT=\"apn\",\"user\",\"pass\"", "OK", 500);
+```
 
 ## Examples
 You can find this examples in the "examples" folder !
@@ -73,7 +76,7 @@ void setup()
   
   gsm.begin("1234");// 1234 is your pin
   
-  gsm.beginGPRS(); // start the gprs
+  gsm.beginGPRS(); // start the gprs and don't forget to change the APN if you need
 }
 
 void loop()

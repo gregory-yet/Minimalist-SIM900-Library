@@ -87,5 +87,15 @@ void loop()
 }
 ```
 
+## Extra
+You can use multiple functions to send personnal AT comand with :
+```Arduino
+sendAT("the at command", "the return string you wait like OK", delay_in_int_to_wait_after_the_command_if_you_need_to_wait_for_a_connection_for_example); // function to send an at command and wait a response from the SIM900 like "OK", if there is no response or an error, there is a timeout of 10 seconds, and you can add an delay to wait after the at command, if you need to wait a connection for example.
+// --------------- //
+simpleAT("at command"); // minimalist function to simply send an at command
+// --------------- //
+simpleRead(); // return the Serial1 (SIM900 Serial) buffer
+```
+
 ## Author
 Grégory G. & Laurent T.
